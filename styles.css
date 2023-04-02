@@ -1,31 +1,56 @@
-body{
-
-}
-
 /* ---Main Layout Blocks --- */
 
 .layoutBlock{
     display: grid;
-    grid-template: min-content 1fr/ min-content 1fr;
+    grid-template: min-content 1fr/min-content 1fr;
 }
 
 .content{
-    border-style: solid;
-    border-width: 1px;
+    background-color: bisque;
+    display: grid;
+        grid-template: 1fr 1fr/1fr 1fr;
     grid-column: 2/3;
     grid-row: 2/3;
 }
 
-.header{
-    border-style: solid;
-    border-width: 1px;
+.topBar{
+    background-color: blue;
     grid-column: 2/3;
     grid-row: 1/2;
 }
 
-.sidebar{
-    border-style: solid;
-    border-width: 1px;
+.navBar{
+    background-color: aqua;
     grid-column: 1/2;
     grid-row: 1/3
+}
+
+/* --- Page Elements --- */
+
+.announcements{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.navElement{
+    padding: 5px;
+}
+
+.project{
+    background-color: brown;
+}
+
+.projects{
+    display: grid;
+        gap: 5px;
+        grid-auto-rows: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-rows: 1fr;
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+
+.trending{
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
