@@ -11,22 +11,32 @@
 
     
     <div class="layoutBlock">
-        <div class="navBar">
+        <nav class="navBar">
             <div class="cornerIcon">Dashboard</div>
-            <div class="navElement">Home</div>
-            <div class="navElement">Profile</div>
-            <div class="navElement">Messages</div>
-            <div class="navElement">History</div>
-            <div class="navElement">Tasks</div>
-            <div class="navElement">Communities</div>
-            <div class="navElement">Settings</div>
-            <div class="navElement">Support</div>
-            <div class="navElement">Privacy</div>
-        </div>
-        <div class="topBar">
-            header
-        </div>
-        <div class="content">
+            <div class="sideLinks">
+                <ul>
+                    <li class="navElement">Home</li>
+                    <li class="navElement">Profile</li>
+                    <li class="navElement">Messages</li>
+                    <li class="navElement">History</li>
+                    <li class="navElement">Tasks</li>
+                    <li class="navElement">Communities</li>
+                    <li class="navElement">Settings</li>
+                    <li class="navElement">Support</li>
+                    <li class="navElement">Privacy</li>
+                </ul>
+            </div>
+        </nav>
+        <header class="header">
+            <div class="searchContainer">
+                <label for="search" id="searchLabel">ICON</label>
+                <input type="text" title="search" id="search">
+            </div>
+            <div class="profileContainer">Profile Stuff and Pics</div>
+            <div class="welcomeContainer">Greetings</div>
+            <div class="buttonsContainer">Top Buttons</div>
+        </header>
+        <main class="mainContent">  
             <div class="projects">
                 <div class="project">1</div>
                 <div class="project">2</div>
@@ -37,7 +47,7 @@
             </div>
             <div class="announcements">Announcements</div>
             <div class="trending">Trending</div>
-        </div>
+        </main>
     </div>
 
 

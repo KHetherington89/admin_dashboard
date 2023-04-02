@@ -1,20 +1,30 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
 /* ---Main Layout Blocks --- */
 
 .layoutBlock{
     display: grid;
     grid-template: min-content 1fr/min-content 1fr;
+    height: 100vh;
+    width: 100vw;
 }
 
-.content{
+.mainContent{
     background-color: bisque;
     display: grid;
-        grid-template: 1fr 1fr/1fr 1fr;
+        grid-template: 1fr 1fr/4fr 1fr;
     grid-column: 2/3;
     grid-row: 2/3;
 }
 
-.topBar{
+.header{
     background-color: blue;
+    display: grid;
+        gap 3px;
+        grid-template: 1fr 1fr/2fr 1fr;
     grid-column: 2/3;
     grid-row: 1/2;
 }
@@ -44,7 +54,7 @@
     display: grid;
         gap: 5px;
         grid-auto-rows: 1fr;
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: 1fr;
     grid-column: 1/2;
     grid-row: 1/3;
