@@ -1,3 +1,31 @@
 body{
-    color: red;
+
+}
+
+/* ---Main Layout Blocks --- */
+
+.layoutBlock{
+    display: grid;
+    grid-template: min-content 1fr/ min-content 1fr;
+}
+
+.content{
+    border-style: solid;
+    border-width: 1px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+.header{
+    border-style: solid;
+    border-width: 1px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.sidebar{
+    border-style: solid;
+    border-width: 1px;
+    grid-column: 1/2;
+    grid-row: 1/3
 }
