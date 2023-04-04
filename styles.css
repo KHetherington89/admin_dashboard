@@ -1,4 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Nova+Square);
+
 body{
+    font-family: "Nova Square", monospace;
+    font-size: 1.5em;
     margin: 0;
     padding: 0;
 }
@@ -8,6 +12,7 @@ body{
 .layoutBlock{
     display: grid;
     grid-template: min-content 1fr/min-content 1fr;
+    grid-template-areas: "navBar header" "navBar mainContent";
     height: 100vh;
     width: 100vw;
 }
@@ -16,34 +21,44 @@ body{
     background-color: bisque;
     display: grid;
         grid-template: 1fr 1fr/4fr 1fr;
-    grid-column: 2/3;
-    grid-row: 2/3;
+        grid-template-areas: "projects announcements" "projects trending";
+    grid-area: mainContent;
 }
 
 .header{
     background-color: blue;
     display: grid;
-        gap 3px;
+        gap: 3px;
         grid-template: 1fr 1fr/2fr 1fr;
-    grid-column: 2/3;
-    grid-row: 1/2;
+    grid-area: header;
 }
 
 .navBar{
     background-color: aqua;
-    grid-column: 1/2;
-    grid-row: 1/3
+    grid-area: navBar;
+    padding: 0px 10px;
 }
 
 /* --- Page Elements --- */
 
 .announcements{
-    grid-column: 2/3;
-    grid-row: 1/2;
+    grid-area: announcements;
+}
+
+.cornerIcon{
+    font-size: 1.25em;
 }
 
 .navElement{
+    display: flex;
     padding: 5px;
+    width: max-content;
+}
+
+.navIcon, .navSpacer, .navText{
+    align-self: center;
+    height: 1em;
+    margin: 5px;
 }
 
 .project{
@@ -56,11 +71,15 @@ body{
         grid-auto-rows: 1fr;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-template-rows: 1fr;
-    grid-column: 1/2;
-    grid-row: 1/3;
+    grid-area: projects;
 }
 
 .trending{
-    grid-column: 2/3;
-    grid-row: 2/3;
+    grid-area: trending;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
